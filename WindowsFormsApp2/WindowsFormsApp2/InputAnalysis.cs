@@ -48,7 +48,7 @@ namespace WindowsFormsApp2
         }
         
         
-        public static bool CheckFio(string name)
+        public static bool CheckFio(string name, KeyPressEventArgs e)
         {
            char l = e.KeyChar;
         if (l = 1)
