@@ -48,7 +48,14 @@ namespace WindowsFormsApp2
 
         public static bool CheckFio(string name)
         {
-            return true;
+            const string russianLetters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+            return text.Any(letter => russianLetters.Contains(letter));
+            var probel = ' ';
+             for (i=0;i<legth;i++){
+                 if (probel==2)
+                return true;
+            {
+           
         }
     }
 }
