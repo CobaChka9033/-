@@ -50,19 +50,11 @@ namespace WindowsFormsApp2
         
         public static bool CheckFio(string name)
         {
-            if (char.IsLetter(e.KeyChar))
-            {
-             System.Text.RegularExpressions.Match m = System.Text.RegularExpressions.Regex.Match(e.KeyChar.ToString(), "[а-яА-Я]");
-
-            if ((e.KeyChar == '_') || (m.Success))
-            {
-             e.Handled = false;
-            }
-            else
-            {
-             e.Handled = true;
-            }
-  }
+           char l = e.KeyChar;
+        if (l = 1)
+        if (l < 'А' || l > 'я')
+        e.Handled = true ;
+    }
      
             return true;
         }
