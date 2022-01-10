@@ -47,14 +47,7 @@ namespace WindowsFormsApp2
 
         }
         
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char l = e.KeyChar;
-            if (l < 'А' || l > 'я')
-            e.Handled = true;
         
-        }
-
         public static bool CheckFio(string name)
         {
      
