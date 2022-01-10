@@ -49,6 +49,16 @@ namespace WindowsFormsApp2
 
         public static bool CheckFio(string name)
         {
+            private bool IsRussian(string str)
+        {
+            char[] chr = str.ToCharArray();
+            for (int i = 0; i < chr.Length; i++)
+            {
+                if (chr[i] >= 'А' && chr[i] <= 'я')
+                    return true;
+            }
+            return false;
+        }
             return true;
         }
     }
