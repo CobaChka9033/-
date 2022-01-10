@@ -46,19 +46,18 @@ namespace WindowsFormsApp2
                 return true;
 
         }
+        
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if (l < 'А' || l > 'я')
+            e.Handled = true;
+        
+        }
 
         public static bool CheckFio(string name)
         {
-            private bool IsRussian(string str)
-        {
-            char[] chr = str.ToCharArray();
-            for (int i = 0; i < chr.Length; i++)
-            {
-                if (chr[i] >= 'А' && chr[i] <= 'я')
-                    return true;
-            }
-            return false;
-        }
+     
             return true;
         }
     }
