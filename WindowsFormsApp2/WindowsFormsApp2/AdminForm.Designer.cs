@@ -31,11 +31,12 @@ namespace WindowsFormsApp2
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.INN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Income = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrePay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,19 +45,21 @@ namespace WindowsFormsApp2
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.INN,
-            this.Name,
+            this.UserName,
             this.Income,
             this.PrePay,
             this.Credit,
             this.Bonus});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(1150, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(862, 284);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // INN
             // 
@@ -66,13 +69,13 @@ namespace WindowsFormsApp2
             this.INN.ReadOnly = true;
             this.INN.Width = 125;
             // 
-            // Name
+            // UserName
             // 
-            this.Name.HeaderText = "ФИО";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Width = 125;
+            this.UserName.HeaderText = "ФИО";
+            this.UserName.MinimumWidth = 6;
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            this.UserName.Width = 125;
             // 
             // Income
             // 
@@ -106,17 +109,29 @@ namespace WindowsFormsApp2
             this.Bonus.ReadOnly = true;
             this.Bonus.Width = 125;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 678);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(888, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 853);
+            this.ClientSize = new System.Drawing.Size(888, 700);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridView1);
-            this.MinimumSize = new System.Drawing.Size(1200, 900);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(904, 739);
+            this.Name = "AdminForm";
             this.Text = "Система налогового учета \"Плати налог\"";
             this.Resize += new System.EventHandler(this.AdminForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,10 +139,11 @@ namespace WindowsFormsApp2
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn INN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Income;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrePay;
         private System.Windows.Forms.DataGridViewTextBoxColumn Credit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bonus;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

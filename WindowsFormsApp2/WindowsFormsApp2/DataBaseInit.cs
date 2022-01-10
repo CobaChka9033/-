@@ -11,6 +11,7 @@ namespace WindowsFormsApp2
     internal class DataBaseInit
     {
         private MySqlConnection connector = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=users");
+
         public MySqlConnection GetConnector() {
             return connector;
         }

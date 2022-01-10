@@ -44,18 +44,10 @@ namespace WindowsFormsApp2
                 return false;
             else 
                 return true;
-
         }
-        
-        
-        public static bool CheckFio(string name, KeyPressEventArgs e)
+
+        public static bool CheckFio(string name)
         {
-           char l = e.KeyChar;
-        if (l = 1)
-        if (l < 'А' || l > 'я')
-        e.Handled = true ;
-    }
-     
             return true;
         }
     }

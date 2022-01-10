@@ -51,7 +51,10 @@ namespace WindowsFormsApp2
             if (command.ExecuteNonQuery() == 1)
                 MessageBox.Show("Аккаунт был создан");
             else
+            {
                 MessageBox.Show("Аккаунт не был создан");
+                return;
+            }
 
             //Создать таблицу для чеков
             //CREATE TABLE `users`.`list111111111111` ( `Id` INT(5) UNSIGNED NOT NULL AUTO_INCREMENT , `CustomerInn` VARCHAR(12) NOT NULL , `CustomerType` VARCHAR(1) NOT NULL , `ProductName` VARCHAR(50) NOT NULL , `Price` VARCHAR(15) NOT NULL, PRIMARY KEY (`ID`) ) ENGINE = InnoDB;
@@ -61,8 +64,6 @@ namespace WindowsFormsApp2
             command.ExecuteNonQuery();
 
             DB.CloseConnection();
-
-
         }
     }
 }
